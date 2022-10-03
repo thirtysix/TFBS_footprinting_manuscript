@@ -35,18 +35,27 @@ Miniconda is the barebones version of the larger Conda package. We will use this
 ```
 
 ## 2.5 Download data
-Ensembl and Neanderthal variant data.
-```
-    $ python3 000.get_data.py
-```
-
-
-# 3. Instructions - Promoterome analysis
 
 Move to our code directory.
 ```
     $ cd ./code
 ```
+
+Download Ensembl and Neanderthal variant data.
+```
+    $ python3 000.get_data.py
+```
+
+
+
+# 3. Instructions - Promoterome analysis
+## 3.0 - Bypass 
+The tasks done in Promoterome analysis section have significant computational, network, disk space, and time requirements.
+These can be bypassed by directly downloading complete results files from the OSF.io repository
+[modern human results parquet file](https://osf.io/download/p8umw/) to (/data/TFBS_footprinter_analysis/human)
+[Neanderthal results parquet file](https://osf.io/download/w56gr/) to (/data/TFBS_footprinter_analysis/neanderthal)
+
+
 
 ## 3.1 Identify variants 
 Those that occur in promoters of protein coding transcripts (+/- 2,500 bp from TSS).
@@ -80,7 +89,11 @@ Targets are the Neanderthal verion of variant locations (\~20,000 positions/tran
 ```
 
 
-## 3.5 Analyze TF binding affinities 
+
+# 4. Instructions - Analysis of the differentially binding TFs (DB TFs)
+Identify the DB TFs and perform various analyses of DB TF expression in secondary datasets.
+
+## 4.1 Analyze TF binding affinities 
 Identify dfferences in TF binding scores between modern human vs. Neanderthal variants.
 
 ```
@@ -88,25 +101,21 @@ Identify dfferences in TF binding scores between modern human vs. Neanderthal va
 ```
 
 
-
-# 4. Instructions - Analysis of the differentially binding TFs (DB TFs)
-Various analyses of DB TF expression in secondary datasets.
-
-## 4.1 Generate cluster/heatmap - FANTOM
+## 4.2 Generate cluster/heatmap - FANTOM
 Of differentially binding TFs gene expression, using all healthy whole body tissues in FANTOM dataset. A truncated (to only TF genes) and compressed (to parquet format) FANTOM dataset file is provided as part of this repository (~400 MB to ~1 MB).
 ```
     $ python3 006.clustermap.fantom_expression_tf_genes.py
 ```
 
 
-## 4.2 Generate cluster/heatmap and expression module plots - Allen Brain Atlas
+## 4.3 Generate cluster/heatmap and expression module plots - Allen Brain Atlas
 Of differentially binding TFs gene expression, using all healthy brain tissues in Allen Brain Atlas dataset. A truncated (to only TF genes) and compressed (to parquet format) Allen Brain Atlas dataset file is provided as part of this repository (~180 MB to ~3 MB).
 ```
     $ python3 007.allen_brain_atlas.py
 ```
 
 
-## 4.3 Analysis of single cell data from cortical regions
+## 4.4 Analysis of single cell data from cortical regions
 See script description below regarding \~5GB of data that needs to be manually downloaded from [https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq](https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq)
 Additional Python libraries need to be installed to process the single cell data.
 ```
