@@ -1,0 +1,328 @@
+grouped_tissue	category
+Adipocyte, breast	adipose & soft
+Adipocyte, omental	adipose & soft
+Adipocyte, perirenal	adipose & soft
+Adipocyte, subcutaneous	adipose & soft
+Alveolar Epithelial Cells	epithelial
+Amniotic Epithelial Cells	epithelial
+Anulus Pulposus Cell	skin & connective
+Astrocyte, cerebellum	brain, eye & retina
+Astrocyte, cerebral cortex	brain, eye & retina
+Basophils	blood & immune
+Bronchial Epithelial Cell	epithelial
+CD133+ stem cells, adult bone marrow derived	blood & immune
+CD133+ stem cells, cord blood derived	blood & immune
+CD14+ Monocytes	blood & immune
+CD14+ monocyte derived endothelial progenitor cells	blood & immune
+CD14+CD16+ Monocytes	blood & immune
+CD14+CD16- Monocytes	blood & immune
+CD14-CD16+ Monocytes	blood & immune
+CD19+ B Cells	blood & immune
+CD34+ Progenitors	blood & immune
+CD34+ stem cells, adult bone marrow derived	blood & immune
+CD4+ T Cells	blood & immune
+CD4+CD25+CD45RA+ naive regulatory T cells expanded	blood & immune
+CD4+CD25+CD45RA+ naive regulatory T cells	blood & immune
+CD4+CD25+CD45RA- memory regulatory T cells expanded	blood & immune
+CD4+CD25+CD45RA- memory regulatory T cells	blood & immune
+CD4+CD25-CD45RA+ naive conventional T cells expanded	blood & immune
+CD4+CD25-CD45RA+ naive conventional T cells	blood & immune
+CD4+CD25-CD45RA- memory conventional T cells expanded	blood & immune
+CD4+CD25-CD45RA- memory conventional T cells	blood & immune
+CD8+ T Cells	blood & immune
+Cardiac Myocyte	muscle
+Chondrocyte, de diff	skin & connective
+Chondrocyte, re diff	skin & connective
+Ciliary Epithelial Cells	epithelial
+Clontech Human Universal Reference Total RNA	
+Corneal Epithelial Cells	epithelial
+Dendritic Cells, monocyte immature derived, donor1	blood & immune
+Dendritic Cells, monocyte immature derived	blood & immune
+Dendritic Cells, plasmacytoid	blood & immune
+Endothelial Cells, Aortic	endothelial
+Endothelial Cells, Artery	endothelial
+Endothelial Cells, Lymphatic	endothelial
+Endothelial Cells, Microvascular	endothelial
+Endothelial Cells, Thoracic	endothelial
+Endothelial Cells, Umbilical vein	endothelial
+Endothelial Cells, Vein	endothelial
+Eosinophils	blood & immune
+Esophageal Epithelial Cells	epithelial
+Fibroblast	skin & connective
+Fibroblast, Aortic Adventitial	skin & connective
+Fibroblast, Cardiac	skin & connective
+Fibroblast, Choroid Plexus	skin & connective
+Fibroblast, Conjunctival	skin & connective
+Fibroblast, Dermal	skin & connective
+Fibroblast, Gingival	skin & connective
+Fibroblast, Lung	respiratory
+Fibroblast, Lymphatic	skin & connective
+Fibroblast, Mammary	skin & connective
+Fibroblast, Periodontal Ligament	skin & connective
+Fibroblast, Pulmonary Artery	skin & connective
+Fibroblast, Villous Mesenchymal	skin & connective
+Fibroblast, skin dystrophia myotonica	skin & connective
+Fibroblast, skin normal	skin & connective
+Fibroblast, skin spinal muscular atrophy	skin & connective
+Fibroblast, skin walker warburg	skin & connective
+Fibroblast, skin	skin & connective
+Fingernail (including nail plate, eponychium and hyponychium)	skin & connective
+Gingival epithelial cells	epithelial
+Hair Follicle Dermal Papilla Cells	skin & connective
+Hair Follicle Outer Root Sheath Cells	skin & connective
+Hepatic Sinusoidal Endothelial Cells	endothelial
+Hepatic Stellate Cells (lipocyte)	gastrointestinal
+Hepatocyte	gastrointestinal
+Intestinal epithelial cells (polarized)	epithelial
+Iris Pigment Epithelial Cells	epithelial
+Keratinocyte, epidermal	skin & connective
+Keratinocyte, oral	skin & connective
+Keratocytes	skin & connective
+Lens Epithelial Cells	epithelial
+Macrophage, monocyte derived	blood & immune
+Mallassez-derived cells	
+Mammary Epithelial Cell	epithelial
+Mast cell, stimulated	blood & immune
+Mast cell	blood & immune
+Mast cell, expanded and stimulated	blood & immune
+Mast cell, expanded	blood & immune
+Melanocyte, dark	skin & connective
+Melanocyte, light	skin & connective
+Melanocyte	skin & connective
+Meningeal Cells	brain, eye & retina
+Mesenchymal Stem Cells, Vertebral	stem cells
+Mesenchymal Stem Cells, Wharton's Jelly	stem cells
+Mesenchymal Stem Cells, adipose	adipose & soft
+Mesenchymal Stem Cells, amniotic membrane	stem cells
+Mesenchymal Stem Cells, bone marrow	blood & immune
+Mesenchymal Stem Cells, hepatic	stem cells
+Mesenchymal Stem Cells, umbilical	stem cells
+Mesenchymal stem cells, adipose	adipose & soft
+Mesenchymal stem cells, hepatic	stem cells
+Mesenchymal stem cells, umbilical	stem cells
+Mesothelial Cells	mesothelial
+Multipotent Cord Blood Unrestricted Somatic Stem Cells	stem cells
+Myoblast	
+Natural Killer Cells	blood & immune
+Neural stem cells	brain, eye & retina
+Neurons	brain, eye & retina
+Neutrophils	blood & immune
+Nucleus Pulposus Cell	
+Olfactory epithelial cells	epithelial
+Osteoblast, differentiated	
+Osteoblast	
+Pancreatic stromal cells	
+Pericytes	blood & immune
+Perineurial Cells	brain, eye & retina
+Peripheral Blood Mononuclear Cells	blood & immune
+Placental Epithelial Cells	epithelial
+Preadipocyte	adipose & soft
+Preadipocyte, breast	adipose & soft
+Preadipocyte, omental	adipose & soft
+Preadipocyte, perirenal	adipose & soft
+Preadipocyte, subcutaneous	adipose & soft
+Preadipocyte, visceral	adipose & soft
+Prostate Epithelial Cells (polarized)	epithelial
+Prostate Epithelial Cells	epithelial
+Prostate Stromal Cells	
+Renal Cortical Epithelial Cells	epithelial
+Renal Epithelial Cells	epithelial
+Renal Glomerular Endothelial Cells	endothelial
+Renal Mesangial Cells	
+Renal Proximal Tubular Epithelial Cell	epithelial
+Retinal Pigment Epithelial Cells	epithelial
+SABiosciences XpressRef Human Universal Total RNA	
+Schwann Cells	blood & immune
+Sebocyte	skin & connective
+Sertoli Cells	female/male
+Skeletal Muscle Cells	muscle
+Skeletal Muscle Satellite Cells	muscle
+Skeletal muscle cells differentiated into Myotubes, multinucleated	muscle
+Skin, palm	skin & connective
+Small Airway Epithelial Cells	epithelial
+Synoviocyte	
+Trabecular Meshwork Cells	
+Tracheal Epithelial Cells	respiratory
+Universal RNA, Human Normal Tissues Biochain	
+Urethra	urinary
+Urothelial Cells	urinary
+Urothelial cells	urinary
+achilles tendon	skin & connective
+adipose tissue, adult	adipose & soft
+adipose	adipose & soft
+adrenal gland, adult	endocrine & exocrine
+amniotic membrane cells	epithelial
+amygdala, adult	brain, eye & retina
+amygdala, newborn	brain, eye & retina
+aorta, adult	circulatory
+bladder, adult	urinary
+blood, adult	blood & immune
+brain, adult	brain, eye & retina
+brain, fetal	brain, eye & retina
+breast, adult	adipose & soft
+caudate nucleus, adult	brain, eye & retina
+caudate nucleus, newborn	brain, eye & retina
+cerebellum, adult	brain, eye & retina
+cerebellum, newborn	brain, eye & retina
+cerebrospinal fluid	brain, eye & retina
+cervix, adult	female/male
+chorionic membrane cells	epithelial
+colon, adult	gastrointestinal
+colon, fetal	gastrointestinal
+common myeloid progenitor CMP	blood & immune
+corpus callosum, adult	brain, eye & retina
+cruciate ligament	skin & connective
+diaphragm, fetal	muscle
+duodenum, fetal	gastrointestinal
+dura mater, adult	brain, eye & retina
+esophagus, adult	gastrointestinal
+eye, muscle inferior rectus	muscle
+eye, muscle lateral	muscle
+eye, muscle medial	muscle
+eye, muscle superior	muscle
+eye, vitreous humor	brain, eye & retina
+eye, fetal	brain, eye & retina
+frontal lobe, adult	brain, eye & retina
+gamma delta positive T cells	blood & immune
+globus pallidus, adult	brain, eye & retina
+globus pallidus, newborn	brain, eye & retina
+granulocyte macrophage progenitor	blood & immune
+heart, adult, diseased post-infarction	circulatory
+heart, adult, diseased	circulatory
+heart, adult	circulatory
+heart, fetal	circulatory
+hippocampus, adult	brain, eye & retina
+hippocampus, newborn	brain, eye & retina
+immature langerhans cells	blood & immune
+insula, adult	brain, eye & retina
+kidney, adult	urinary
+kidney, fetal	urinary
+left atrium, adult	circulatory
+left ventricle, adult	circulatory
+liver, adult	gastrointestinal
+liver, fetal	gastrointestinal
+locus coeruleus, adult	brain, eye & retina
+locus coeruleus, newborn	brain, eye & retina
+lung, adult	respiratory
+lung, fetal	respiratory
+lung, right lower lobe, adult	respiratory
+lymph node, adult	lymphatic
+mature adipocyte	adipose & soft
+medial frontal gyrus, adult	brain, eye & retina
+medial frontal gyrus, newborn	brain, eye & retina
+medial temporal gyrus, adult	brain, eye & retina
+medial temporal gyrus, newborn	brain, eye & retina
+medulla oblongata, adult	brain, eye & retina
+medulla oblongata, newborn	brain, eye & retina
+migratory langerhans cells	epithelial
+nasal epithelial cells	epithelial
+neutrophil PMN	blood & immune
+nucleus accumbens, adult	brain, eye & retina
+occipital cortex, adult	brain, eye & retina
+occipital cortex, newborn	brain, eye & retina
+occipital lobe, adult	brain, eye & retina
+occipital lobe, fetal	brain, eye & retina
+occipital pole, adult	brain, eye & retina
+optic nerve	brain, eye & retina
+ovary, adult	female/male
+pancreas, adult	gastrointestinal
+paracentral gyrus, adult	brain, eye & retina
+parietal cortex, adult	brain, eye & retina
+parietal lobe, adult	brain, eye & retina
+parietal lobe, fetal	brain, eye & retina
+parietal lobe, newborn	brain, eye & retina
+pineal gland, adult	brain, eye & retina
+pituitary gland, adult	brain, eye & retina
+placenta, adult	female/male
+pons, adult	brain, eye & retina
+postcentral gyrus, adult	brain, eye & retina
+promyelocytes/myelocytes PMC	blood & immune
+prostate, adult	female/male
+putamen, adult	brain, eye & retina
+putamen, newborn	brain, eye & retina
+rectum, fetal	gastrointestinal
+retina, adult	brain, eye & retina
+salivary acinar cells	gastrointestinal
+salivary gland, adult	gastrointestinal
+skeletal muscle, soleus muscle	muscle
+skeletal muscle, adult	muscle
+skeletal muscle, fetal	muscle
+skin, adult	skin & connective
+skin, fetal	skin & connective
+small intestine, adult	gastrointestinal
+small intestine, fetal	gastrointestinal
+smooth muscle, adult	muscle
+spinal cord, adult	brain, eye & retina
+spinal cord, fetal	brain, eye & retina
+spinal cord, newborn	brain, eye & retina
+spleen, adult	blood & immune
+spleen, fetal	blood & immune
+stomach, fetal	gastrointestinal
+substantia nigra, adult	brain, eye & retina
+substantia nigra, newborn	brain, eye & retina
+temporal lobe, adult	brain, eye & retina
+temporal lobe, fetal	brain, eye & retina
+tenocyte	skin & connective
+testis, adult	female/male
+thalamus, adult	brain, eye & retina
+thalamus, newborn	brain, eye & retina
+throat, fetal	gastrointestinal
+thymus, adult	blood & immune
+thymus, fetal	blood & immune
+thyroid, adult	endocrine & exocrine
+thyroid, fetal	endocrine & exocrine
+tongue epidermis (fungiform papillae)	gastrointestinal
+tongue, fetal	gastrointestinal
+tonsil, adult	blood & immune
+trachea, adult	respiratory
+trachea, fetal	respiratory
+umbilical cord, fetal	skin & connective
+uterus, adult	female/male
+uterus, fetal	female/male
+cerebral meninges, adult	brain, eye & retina
+gall bladder, adult	gastrointestinal
+appendix, adult	gastrointestinal
+submaxillary gland, adult	gastrointestinal
+throat, adult	gastrointestinal
+tongue, adult	gastrointestinal
+heart, tricuspid valve, adult	circulatory
+heart, mitral valve, adult	circulatory
+heart, pulmonic valve, adult	circulatory
+artery, adult	circulatory
+vein, adult	circulatory
+bone marrow, adult	blood & immune
+epididymis, adult	female/male
+penis, adult	female/male
+vagina, adult	female/male
+ductus deferens, adult	female/male
+seminal vesicle, adult	female/male
+CD19+ B Cells (pluriselect)	blood & immune
+CD8+ T Cells (pluriselect)	blood & immune
+Oligodendrocyte, precursors	brain, eye & retina
+Smooth Muscle Cells, Aortic	circulatory
+Smooth Muscle Cells, Bladder	circulatory
+Smooth Muscle Cells, Brachiocephalic	circulatory
+Smooth Muscle Cells, Brain Vascular	circulatory
+Smooth Muscle Cells, Bronchial	circulatory
+Smooth Muscle Cells, Carotid	circulatory
+Smooth Muscle Cells, Colonic	circulatory
+Smooth Muscle Cells, Coronary Artery	circulatory
+Smooth Muscle Cells, Esophageal	circulatory
+Smooth Muscle Cells, Internal Thoracic Artery	circulatory
+Smooth Muscle Cells, Intestinal	circulatory
+Smooth Muscle Cells, Prostate	circulatory
+Smooth Muscle Cells, Pulmonary Artery	circulatory
+Smooth Muscle Cells, Subclavian Artery	circulatory
+Smooth Muscle Cells, Tracheal	circulatory
+Smooth Muscle Cells, Umbilical Artery	circulatory
+Smooth Muscle Cells, Umbilical Vein	circulatory
+Smooth Muscle Cells, Umbilical artery	circulatory
+Smooth Muscle Cells, Uterine	circulatory
+Smooth muscle cells, airway, control	circulatory
+Whole blood (ribopure)	blood & immune
+diencephalon, adult	brain, eye & retina
+mesenchymal precursor cell, adipose	adipose & soft
+mesenchymal precursor cell, bone marrow	blood & immune
+mesenchymal precursor cell, cardiac	circulatory
+olfactory region, adult	respiratory
+parotid gland, adult	gastrointestinal
