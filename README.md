@@ -8,8 +8,9 @@ Implements the transcription factor binding site prediction tool [TFBS_footprint
 
 ---
 ---
-# 2. Instructions
+# 2. Instructions - Setup
 We will give instructions to set up a miniconda environment to contain the dependencies needed and to run the manuscript's analysis scripts.
+
 
 ## 2.1 Install miniconda
 Miniconda is the barebones version of the larger Conda package. We will use this so that we choose only the dependencies that are needed and therefore reduce the installation size and time. The Miniconda installation instructions are here: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
@@ -33,22 +34,28 @@ Miniconda is the barebones version of the larger Conda package. We will use this
     $ pip install wget
 ```
 
-## 2.5 Move to our code directory
-```
-    $ cd ./code
-```
-
-## 2.6 Run script to download Ensembl and Neanderthal variant data
+## 2.5 Download data
+Ensembl and Neanderthal variant data
 ```
     $ python3 000.get_data.py
 ```
 
-## 2.7 Run script to identify variants that occur in promoters of protein coding transcripts (+/- 2,500 bp from TSS)
+
+# 3. Instructions - Promoterome analysis
+
+Move to our code directory
+```
+    $ cd ./code
+```
+
+## 3.1 Identify variants 
+Those that occur in promoters of protein coding transcripts (+/- 2,500 bp from TSS)
 ```
     $ python3 001.neanderthal_variants.py
 ```
 
-## 2.8 Run TFBS_footprinter3 on human verion of variant locations (\~20,000 positions/transcript promoters)
+## 3.2 Run TFBS_footprinter3 
+On human verion of variant locations (\~20,000 positions/transcript promoters)
  - Will download sequence centered on each variant (e.g., 50bp) and score with all JASPAR TF models.
  - Number of simultaneous threads can be set in script file (\~1 to 5GB required for each thread)
 
@@ -56,7 +63,8 @@ Miniconda is the barebones version of the larger Conda package. We will use this
     $ python3 002.tfbs_footprinter_run.human.chunks.py
 ```
 
-## 2.9 Run script to copy downloaded human promoter seqs and create a Neanderthal version
+## 3.3 Copy downloaded human promoter seqs 
+Create a Neanderthal version
  
 ```
     $ python3 003.human2neandertal.py
@@ -64,33 +72,42 @@ Miniconda is the barebones version of the larger Conda package. We will use this
 
 
 
-## 2.10 Run TFBS_footprinter3 on Neanderthal verion of variant locations (\~20,000 positions/transcript promoters)
+## 3.4 Run TFBS_footprinter3 
+On Neanderthal verion of variant locations (\~20,000 positions/transcript promoters)
 
 ```
     $ python3 004.tfbs_footprinter_run.neanderthal.chunks.py
 ```
 
 
-## 2.11 Run script analyzing differences between TF binding affinities in modern human vs. Neanderthal variants
+## 3.5 Analyze TF binding affinities 
+Differences between modern human vs. Neanderthal variants
 
 ```
     $ python3 005.tf_frame_score_changes.py
 ```
 
 
-## 2.12 Run script to generate cluster/heatmap of differentially binding TFs gene expression, using all healthy whole body tissues in FANTOM dataset. A truncated (to only TF genes) and compressed (to parquet format) FANTOM dataset file is provided as part of this repository (~400 MB to ~1 MB).
+
+# 4. Instructions - Analysis of the differentially binding TFs (DB TFs)
+Various analyses of DB TF expression in secondary datasets.
+
+## 4.1 Generate cluster/heatmap - FANTOM
+Of differentially binding TFs gene expression, using all healthy whole body tissues in FANTOM dataset. A truncated (to only TF genes) and compressed (to parquet format) FANTOM dataset file is provided as part of this repository (~400 MB to ~1 MB).
 ```
     $ python3 006.clustermap.fantom_expression_tf_genes.py
 ```
 
 
-## 2.13 Run script to generate cluster/heatmap of differentially binding TFs gene expression, using all healthy brain tissues in Allen Brain Atlas dataset. A truncated (to only TF genes) and compressed (to parquet format) Allen Brain Atlas dataset file is provided as part of this repository (~180 MB to ~3 MB).
+## 4.2 Generate cluster/heatmap and expression module plots - Allen Brain Atlas
+Of differentially binding TFs gene expression, using all healthy brain tissues in Allen Brain Atlas dataset. A truncated (to only TF genes) and compressed (to parquet format) Allen Brain Atlas dataset file is provided as part of this repository (~180 MB to ~3 MB).
 ```
     $ python3 007.allen_brain_atlas.py
 ```
 
 
-## 2.14 Run script to do analysis of single cell data from cortical regions.  See script description below regarding \~5GB of data that needs to be manually downloaded from [https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq](https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq)
+## 4.3 Analysis of single cell data from cortical regions
+See script description below regarding \~5GB of data that needs to be manually downloaded from [https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq](https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq)
 Additional Python libraries need to be installed to process the single cell data.
 ```
     $ conda install -c conda-forge python-igraph
@@ -103,8 +120,9 @@ Run the analysis script:
     $ python3 999.scanpy_run.py
 ```
 
-
-## 2.15 Run script to do mapping of ChIP-Seq data from 21,988 experiments to promoter regions to determine occupancy and optimal boundaries for searching for TF binding events. See script description below regarding \~8GB of data that needs to be manually downloaded from [http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq](http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq/)
+# 5. Instructions - Identify canonical promoter boundaries with mapping of ChIP-Seq peaks
+## 5.1 Map of ChIP-Seq data to promoter regions 
+From 21,988 ChIP-Seq experiments. Determine occupancy and optimal boundaries for searching for TF binding events. See script description below regarding \~8GB of data that needs to be manually downloaded from [http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq](http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq/)
 
 ```
     $ python3 999.gtrd_peaking.3prime_5prime.py
@@ -114,7 +132,7 @@ Run the analysis script:
 
 ---
 ---
-# 3. Script files
+# 6. Script file descriptions
 
 ### __000.get_data.py__
 **DESCRIPTION:** 
@@ -163,7 +181,7 @@ __OUTPUTS:__
 
 
 ---
-### __003.human2neandertal_chimp.py__
+### __003.human2neandertal.py__
 **DESCRIPTION:** 
 Downloaded files from the human analysis are copied to a neanderthal dir, and edited to match the variant cataloged in the CatalogOfChanges data. TFBS_footprinter will in the next step be run on these created Neanderthal sequence versions.
 
@@ -195,7 +213,7 @@ __OUTPUTS:__
 ---
 ### __005.tf_frame_score_changes.py__
 **DESCRIPTION:** 
-Match and analyze differences in predicted TFBSs at modern human vs. Neanderthal SNPs. Produce a list of those TFs which have a statistically significant difference in binding between species; differentially binding TFs (DBTFs).
+Match and analyze differences in predicted TFBSs at modern human vs. Neanderthal SNPs. Produce a list of those TFs which have a statistically significant difference in binding between species; differentially binding TFs (DB TFs).
 
 __INPUTS:__
 * (/data/TFBS_footprinter_analysis/human/tfbs_results) TFBS_footprinter run human results.
@@ -211,7 +229,7 @@ __OUTPUTS:__
 ---
 ### __006.clustermap.py__
 **DESCRIPTION:** 
-Using the list DBTFs, extract expression data from the FANTOM dataset and perform cluster analysis and produce clustermap figure. Using data from The Protein Atlas, identify which DBTFs have tissue-specific expression and produce matrix figure.
+Using the list of DB TFs, extract expression data from the FANTOM dataset and perform cluster analysis and produce clustermap figure. Using data from The Protein Atlas, identify which DB TFs have tissue-specific expression and produce matrix figure.
 
 __INPUTS:__
 * (/data_raw/FANTOM) Bulk RNA-Seq gene expression data from the FANTOM 5 project. Custom parquet file has been created to limit the FANTOM 5 data to expression of only those TF genes described in the JASPAR database. Likewise, disease tissues have been removed and remaining healthy tissues grouped to top-level umbrella tissues (\~220MB \*.txt.gz to \~1.1MB \*.parquet)
@@ -250,7 +268,8 @@ Map high-scoring peaks from 21,988 human ChIP-Seq experiments to all human promo
 The relevant files are:
  * [GTRD ChIP-Seq MACS peaks human (\~8 GB)](http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq/Homo_sapiens_ChIP-seq_peaks_MACS2.zip)
  * [GTEx transcript counts (\~3.5 GB)](https://storage.googleapis.com/gtex_analysis_v8/rna_seq_data/GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_transcript_tpm.gct.gz)
- __INPUTS:__
+ 
+__INPUTS:__
 * (/data_raw/Ensembl) Ensembl GTF data.
 * (/data_raw/GTRD/Homo_sapiens_ChIP-seq_peaks_MACS2) ChIP-Seq data from GTRD project -- data needs to be manually downloaded as described above and placed here.
 * (/data_raw/GTEx) Trascript level expression counts data from GTEx project -- data needs to be manually downloaded as described above and placed here.
