@@ -221,9 +221,10 @@ def get_DICE_immune_genes():
     """
 
     # ensembl gene ids - for matching with DICE entries
-    # can be downloaded directly: http://www.ensembl.org/biomart/martview/4d9ab7b71bd18892033d0ebbff1d8d70?VIRTUALSCHEMANAME=default&ATTRIBUTES=hsapiens_gene_ensembl.default.feature_page.ensembl_gene_id|hsapiens_gene_ensembl.default.feature_page.external_gene_name&FILTERS=&VISIBLEPANEL=filterpanel
-    ensembl_fn = os.path.join(data_raw_ensembl_dn, "mart_export.gene_id.gene_name.tsv")
+    ensembl_fn = os.path.join(data_raw_ensembl_dn, "mart_export.transcript_id.gene_id.gene_name.txt")
     ensembl_df = pd.read_csv(ensembl_fn, sep="\t")
+    ensembl_df = ensembl_df.drop_duplicates(subset=["Gene stable ID"], keep='first')
+    ensembl_df = ensembl_df.drop("Transcript stable ID", axis=1)
     ensembl_df.columns=["ens_id", "gene_name"]
 
     # parse the immune gene names
