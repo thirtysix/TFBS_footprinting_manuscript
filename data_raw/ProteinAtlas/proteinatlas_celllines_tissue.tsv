@@ -1,0 +1,70 @@
+name	tissue group
+A-431	epidermis
+A549	respiratory
+AF22	brain, eye & retina
+AN3-CA	female/male
+ASC diff	mesenchymal
+ASC TERT1	mesenchymal
+BEWO	female/male
+BJ	mesenchymal
+BJ hTERT+	mesenchymal
+BJ hTERT+ SV40 Large T+	mesenchymal
+BJ hTERT+ SV40 Large T+ RasG12V	mesenchymal
+CACO-2	gastrointestinal
+CAPAN-2	endocrine & exocrine
+Daudi	bone marrow & immune system
+EFO-21	female/male
+fHDF/TERT166	mesenchymal
+GAMG	brain, eye & retina
+HaCaT	epidermis
+HAP1	blood
+HBEC3-KT	respiratory
+HBF TERT88	mesenchymal
+HDLM-2	bone marrow & immune system
+HEK 293	kidney & bladder
+HEL	blood
+HeLa	female/male
+Hep G2	liver
+HHSteC	mesenchymal
+HL-60	blood
+HMC-1	blood
+HSkMC	muscle
+hTCEpi	brain, eye & retina
+hTEC/SVTERT24-B	endothelial
+hTERT-HME1	female/male
+hTERT-RPE1	brain, eye & retina
+HUVEC TERT2	endothelial
+JURKAT	bone marrow & immune system
+K-562	blood
+Karpas-707	bone marrow & immune system
+LHCN-M2	mesenchymal
+MCF7	female/male
+MOLT-4	bone marrow & immune system
+NB-4	blood
+NTERA-2	kidney & bladder
+OE19	gastrointestinal
+PC-3	female/male
+REH	bone marrow & immune system
+RH-30	mesenchymal
+RPMI-8226	bone marrow & immune system
+RPTEC TERT1	kidney & bladder
+RT4	kidney & bladder
+SCLC-21H	respiratory
+SH-SY5Y	brain, eye & retina
+SiHa	female/male
+SK-BR-3	female/male
+SK-MEL-30	epidermis
+SuSa	female/male
+T-47d	female/male
+THP-1	blood
+TIME	endothelial
+U-138 MG	brain, eye & retina
+U-2 OS	mesenchymal
+U-2197	mesenchymal
+U-251 MG	brain, eye & retina
+U-266/70	bone marrow & immune system
+U-266/84	bone marrow & immune system
+U-698	bone marrow & immune system
+U-87 MG	brain, eye & retina
+U-937	blood
+WM-115	epidermis
