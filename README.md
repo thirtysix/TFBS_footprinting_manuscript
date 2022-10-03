@@ -13,7 +13,7 @@ We will give instructions to set up a miniconda environment to contain the depen
 
 
 ## 2.1 Install miniconda
-Miniconda is the barebones version of the larger Conda package. We will use this so that we choose only the dependencies that are needed and therefore reduce the installation size and time. The Miniconda installation instructions are here: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+Miniconda is the barebones version of the larger Conda package. We will use this so that we choose only the dependencies that are needed and therefore reduce the installation size and time. The Miniconda installation instructions are here: [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 
 ## 2.2 Create environment and activate
 ```
@@ -35,7 +35,7 @@ Miniconda is the barebones version of the larger Conda package. We will use this
 ```
 
 ## 2.5 Download data
-Ensembl and Neanderthal variant data
+Ensembl and Neanderthal variant data.
 ```
     $ python3 000.get_data.py
 ```
@@ -43,28 +43,28 @@ Ensembl and Neanderthal variant data
 
 # 3. Instructions - Promoterome analysis
 
-Move to our code directory
+Move to our code directory.
 ```
     $ cd ./code
 ```
 
 ## 3.1 Identify variants 
-Those that occur in promoters of protein coding transcripts (+/- 2,500 bp from TSS)
+Those that occur in promoters of protein coding transcripts (+/- 2,500 bp from TSS).
 ```
     $ python3 001.neanderthal_variants.py
 ```
 
-## 3.2 Run TFBS_footprinter3 
-On human verion of variant locations (\~20,000 positions/transcript promoters)
+## 3.2 Run TFBS_footprinter3 - Human
+Targets are the human verion of variant locations (\~20,000 positions/transcript promoters).
  - Will download sequence centered on each variant (e.g., 50bp) and score with all JASPAR TF models.
- - Number of simultaneous threads can be set in script file (\~1 to 5GB required for each thread)
+ - Number of simultaneous threads can be set in script file (\~1 to 5GB required for each thread).
 
 ```
     $ python3 002.tfbs_footprinter_run.human.chunks.py
 ```
 
-## 3.3 Copy downloaded human promoter seqs 
-Create a Neanderthal version
+## 3.3 Copy downloaded human promoter sequences
+Create the Neanderthal sequence versions by substituting in the Neanderthal variant to the copied human sequence.
  
 ```
     $ python3 003.human2neandertal.py
@@ -72,8 +72,8 @@ Create a Neanderthal version
 
 
 
-## 3.4 Run TFBS_footprinter3 
-On Neanderthal verion of variant locations (\~20,000 positions/transcript promoters)
+## 3.4 Run TFBS_footprinter3 - Neanderthal
+Targets are the Neanderthal verion of variant locations (\~20,000 positions/transcript promoters).
 
 ```
     $ python3 004.tfbs_footprinter_run.neanderthal.chunks.py
@@ -81,7 +81,7 @@ On Neanderthal verion of variant locations (\~20,000 positions/transcript promot
 
 
 ## 3.5 Analyze TF binding affinities 
-Differences between modern human vs. Neanderthal variants
+Identify dfferences in TF binding scores between modern human vs. Neanderthal variants.
 
 ```
     $ python3 005.tf_frame_score_changes.py
@@ -122,7 +122,7 @@ Run the analysis script:
 
 # 5. Instructions - Identify canonical promoter boundaries with mapping of ChIP-Seq peaks
 ## 5.1 Map of ChIP-Seq data to promoter regions 
-From 21,988 ChIP-Seq experiments. Determine occupancy and optimal boundaries for searching for TF binding events. See script description below regarding \~8GB of data that needs to be manually downloaded from [http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq](http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq/)
+From 21,988 ChIP-Seq experiments. Determine occupancy and optimal boundaries for searching for TF binding events. See script description below regarding \~8GB of data that needs to be manually downloaded from [http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq](http://gtrd.biouml.org:8888/downloads/current/intervals/chip-seq/).
 
 ```
     $ python3 999.gtrd_peaking.3prime_5prime.py
