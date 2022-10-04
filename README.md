@@ -30,7 +30,7 @@ Miniconda is the barebones version of the larger Conda package. We will use this
 ```
     $ conda install -c anaconda seaborn Pillow
     $ conda install -c bioconda pyliftover
-    $ # conda install -c conda-forge pyarrow=7.0.0 fastparquet
+    $ conda install -c conda-forge pyarrow=7.0.0 fastparquet
     $ pip install wget
 ```
 
@@ -51,9 +51,9 @@ Download Ensembl and Neanderthal variant data.
 # 3. Instructions - Promoterome analysis
 ## 3.0 - Bypass 
 The tasks done in Promoterome analysis section have significant computational, network, disk space, and time requirements.
-These can be bypassed by directly downloading complete results files from the OSF.io repository
-[modern human results parquet file](https://osf.io/download/p8umw/) to (/data/TFBS_footprinter_analysis/human)
-[Neanderthal results parquet file](https://osf.io/download/w56gr/) to (/data/TFBS_footprinter_analysis/neanderthal)
+These can be bypassed by directly downloading complete results files from the OSF.io repository and placing them in the relevant subfolder within (/data/TFBS_footprinter_analysis)
+ - [modern human results parquet file](https://osf.io/download/p8umw/) to (/data/TFBS_footprinter_analysis/human)
+ - [Neanderthal results parquet file](https://osf.io/download/w56gr/) to (/data/TFBS_footprinter_analysis/neanderthal)
 
 
 
@@ -64,9 +64,11 @@ Those that occur in promoters of protein coding transcripts (+/- 2,500 bp from T
 ```
 
 ## 3.2 Run TFBS_footprinter3 - Human
-Targets are the human verion of variant locations (\~20,000 positions/transcript promoters).
- - Will download sequence centered on each variant (e.g., 50bp) and score with all JASPAR TF models.
- - Number of simultaneous threads can be set in script file (\~1 to 5GB required for each thread).
+Targets are the human verion of variant locations (\~22,000 positions/transcript promoters).
+ - Generates ~154,000 files; Time and RAM requirement depends on number of threads run.
+ - Number of simultaneous threads can be set in script file (\~1 to 5GB required for each thread), default is 2 threads.
+ - Will download sequences (\~22,000) centered on each variant (e.g., 50bp) using Ensembl REST
+ - Score with all JASPAR TF models.
 
 ```
     $ python3 002.tfbs_footprinter_run.human.chunks.py
@@ -82,7 +84,11 @@ Create the Neanderthal sequence versions by substituting in the Neanderthal vari
 
 
 ## 3.4 Run TFBS_footprinter3 - Neanderthal
-Targets are the Neanderthal verion of variant locations (\~20,000 positions/transcript promoters).
+Targets are the Neanderthal verion of variant locations (\~22,000 positions/transcript promoters).
+ - Generates ~154,000 files; Time and RAM requirement depends on number of threads run.
+ - Number of simultaneous threads can be set in script file (\~1 to 5GB required for each thread), default is 2 threads.
+ - Sequences do not need to be redownloaded, as they are copied from modern human version and modified in last step.
+ - Score with all JASPAR TF models.
 
 ```
     $ python3 004.tfbs_footprinter_run.neanderthal.chunks.py
@@ -93,8 +99,10 @@ Targets are the Neanderthal verion of variant locations (\~20,000 positions/tran
 # 4. Instructions - Analysis of the differentially binding TFs (DB TFs)
 Identify the DB TFs and perform various analyses of DB TF expression in secondary datasets.
 
-## 4.1 Analyze TF binding affinities 
+## 4.1 Compare TF binding affinities
 Identify dfferences in TF binding scores between modern human vs. Neanderthal variants.
+ - Identify significant TF binding sites, with Benjimini-Hochbergy correction filtered at 0.01 FDR.
+ - Compare significant results between modern human and Neanderthal with Wilcoxon rank statistical test with Benjimini-Hochbergy correction filtered at 0.1 FDR.
 
 ```
     $ python3 005.tf_frame_score_changes.py
