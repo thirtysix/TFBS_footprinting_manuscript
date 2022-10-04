@@ -50,8 +50,8 @@ Download Ensembl and Neanderthal variant data.
 
 # 3. Instructions - Promoterome analysis
 ## 3.0 - Bypass 
-The tasks done in Promoterome analysis section have significant computational, network, disk space, and time requirements.
-These can be bypassed by directly downloading complete results files from the OSF.io repository and placing them in the relevant subfolder within (/data/TFBS_footprinter_analysis)
+The tasks done in Promoterome analysis section have significant computational, network (80,000 Ensembl REST calls), disk space (300,000 files; ~2GB), and time (10-30 hours) requirements.
+These can be bypassed by directly downloading complete results files (two ~60MB files) from the OSF.io repository and placing them in the relevant subfolder within (/data/TFBS_footprinter_analysis)
  - [modern human results parquet file](https://osf.io/download/p8umw/) to (/data/TFBS_footprinter_analysis/human)
  - [Neanderthal results parquet file](https://osf.io/download/w56gr/) to (/data/TFBS_footprinter_analysis/neanderthal)
 
